@@ -59,7 +59,7 @@ configCenter.setAddress("nacos://127.0.0.1:8848");
 ```yaml
 dubbo
   config-center
-    address: nacos://127.0.0.1:2181
+    address: nacos://127.0.0.1:8848
     config-file: dubbo.properties # optional
 ```
 `config-file` - 全局外部化配置文件 key 值，默认 `dubbo.properties`。`config-file` 代表将 Dubbo 配置文件存储在远端注册中心时，文件在配置中心对应的 key 值，通常不建议修改此配置项。
@@ -76,7 +76,7 @@ dataId 是 `dubbo.properties`，group 分组与 config-center 保持一致，如
 ```yaml
 dubbo
   config-center
-    address: nacos://127.0.0.1:2181
+    address: nacos://127.0.0.1:8848
     app-config-file: dubbo.properties # optional
 ```
 
@@ -92,7 +92,7 @@ dataId 是 `dubbo.properties`，group 分组设置为应用名即 `demo-provider
 ```yaml
 dubbo
   config-center
-    address: zookeeper://127.0.0.1:2181
+    address: nacos://127.0.0.1:8848
     group: dubbo-cluster1
     namespace: dev1
 ```
